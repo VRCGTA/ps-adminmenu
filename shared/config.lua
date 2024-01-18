@@ -6,7 +6,7 @@ Config.ShowCommandsPerms = 'admin' -- permission to show all commands
 Config.RenewedPhone = false    -- if you use qb-phone from renewed. (multijob)
 
 -- Key Bindings
-Config.Keybindings = true
+Config.Keybindings = false
 Config.AdminKey = "PageDown"
 Config.NoclipKey = "PageUp"
 
