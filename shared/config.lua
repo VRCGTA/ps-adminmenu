@@ -1,6 +1,6 @@
 Config = Config or {}
 
-Config.Fuel = "ps-fuel"        -- "ps-fuel", "cdn-fuel"
+Config.Fuel = "cdn-fuel"        -- "ps-fuel", "cdn-fuel"
 Config.ResourcePerms = 'admin' -- permission to control resource(start stop restart)
 Config.ShowCommandsPerms = 'admin' -- permission to show all commands
 Config.RenewedPhone = false    -- if you use qb-phone from renewed. (multijob)
@@ -11,7 +11,7 @@ Config.AdminKey = "PageDown"
 Config.NoclipKey = "PageUp"
 
 -- Give Car
-Config.DefaultGarage = "Alta Garage"
+Config.DefaultGarage = "Legion Square 8037"
 
 Config.Actions = {
     ["admin_car"] = {
