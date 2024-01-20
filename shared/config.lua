@@ -6,9 +6,9 @@ Config.ShowCommandsPerms = 'admin' -- permission to show all commands
 Config.RenewedPhone = false    -- if you use qb-phone from renewed. (multijob)
 
 -- Key Bindings
-Config.Keybindings = false
-Config.AdminKey = "PageDown"
-Config.NoclipKey = "PageUp"
+Config.Keybindings = true
+Config.AdminKey = "F4"
+Config.NoclipKey = "F5"
 
 -- Give Car
 Config.DefaultGarage = "Legion Square 8037"
