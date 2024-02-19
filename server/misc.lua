@@ -172,8 +172,7 @@ RegisterNetEvent('ps-adminmenu:server:GiveMoneyAll', function(data, selectedData
     for _, v in pairs(players) do
         local Player = QBCore.Functions.GetPlayer(tonumber(v))
         Player.Functions.AddMoney(tostring(moneyType), tonumber(amount))
-        QBCore.Functions.Notify(src,
-            locale((moneyType == "crypto" and "give_money_all_crypto" or "give_money_all"), tonumber(amount)), "success")
+        -- QBCore.Functions.Notify(src,locale((moneyType == "crypto" and "give_money_all_crypto" or "give_money_all"), tonumber(amount)), "success")
     end
 end)
 
