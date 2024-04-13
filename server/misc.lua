@@ -271,3 +271,40 @@ RegisterNetEvent("ps-adminmenu:server:setPed", function(data, selectedData)
 
     TriggerClientEvent("ps-adminmenu:client:setPed", Player.PlayerData.source, ped)
 end)
+
+RegisterNetEvent('ps-adminmenu:server:AddStickerPermit', function(data, selectedData)
+    local data = CheckDataFromKey(data)
+    if not data or not CheckPerms(data.perms) then return end
+    local src = source
+    local target = QBCore.Functions.GetPlayer(selectedData["Player"].value)
+
+    if not target then
+        QBCore.Functions.Notify(src, locale("not_online"), 'error', 7500)
+        return
+    end
+
+    MySQL.insert('INSERT IGNORE INTO sticker_permit_players (citizenid) VALUES (?)',
+    {
+        target.PlayerData.citizenid
+    })
+    QBCore.Functions.Notify(source, string.format("%s %sにステッカー権限を付与しました", target.PlayerData.charinfo.firstname, target.PlayerData.charinfo.lastname), 'success')
+end)
+
+RegisterNetEvent('ps-adminmenu:server:RemoveStickerPermit', function(data, selectedData)
+    local data = CheckDataFromKey(data)
+    if not data or not CheckPerms(data.perms) then return end
+    local src = source
+    local target = QBCore.Functions.GetPlayer(selectedData["Player"].value)
+
+    if not target then
+        QBCore.Functions.Notify(src, locale("not_online"), 'error', 7500)
+        return
+    end
+
+    MySQL.insert('DELETE FROM sticker_permit_players WHERE citizenid = ?',
+    {
+        target.PlayerData.citizenid
+    })
+
+    QBCore.Functions.Notify(source, string.format("%s %sからステッカー権限を剥奪しました", target.PlayerData.charinfo.firstname, target.PlayerData.charinfo.lastname), 'error')
+end)

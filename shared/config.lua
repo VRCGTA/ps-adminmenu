@@ -657,6 +657,22 @@ Config.Actions = {
             { label = "Play Sound", option = "button",   type = "client", event = "ps-adminmenu:client:PlaySound" },
         },
     },
+    ["sticker_permit_add"] = {
+        label = "Add sticker permit",
+        perms = "mod",
+        dropdown = {
+            { label = "Player",  option = "dropdown", data = "players" },
+            { label = "Confirm", option = "button",   type = "server", event = "ps-adminmenu:server:AddStickerPermit" },
+        },
+    },
+    ["sticker_permit_remove"] = {
+        label = "Remove sticker permit",
+        perms = "mod",
+        dropdown = {
+            { label = "Player",  option = "dropdown", data = "players" },
+            { label = "Confirm", option = "button",   type = "server", event = "ps-adminmenu:server:RemoveStickerPermit" },
+        },
+    },
 }
 
 Config.PlayerActions = {
