@@ -3,10 +3,10 @@
 	import { MENU_WIDE, ACTIVE_PAGE } from '@store/stores'
 	import Sidebar from './Sidebar/Sidebar.svelte'
 
-	import Actions from '@pages/Actions/Actions.svelte'
-	import Server from '@pages/Server/Server.svelte'
+	import Actions from '@pages/actions/Actions.svelte'
+	import Server from '@pages/server/Server.svelte'
 	import StaffChat from '@pages/Chat/Chat.svelte'
-	import Players from '@pages/Players/Players.svelte'
+	import Players from '@pages/players/Players.svelte'
 	import Commands from '@pages/Commands/Commands.svelte'
 </script>
 

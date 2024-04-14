@@ -8,7 +8,7 @@
 	import Spinner from '@components/Spinner.svelte'
 	import Autofill from '@components/Autofill.svelte'
 	import Modal from '@components/Modal.svelte'
-	import Input from '@pages/Actions/components/Input.svelte'
+	import Input from '@pages/actions/components/Input.svelte'
 
 	let search = ''
 	let loading = false
@@ -351,8 +351,8 @@
 						<p>CID: {$SELECTED_PLAYER.cid}</p>
 						<p>Name: {$SELECTED_PLAYER.name}</p>
 						<p>Job: {$SELECTED_PLAYER.job}</p>
-						<p>Cash: ${$SELECTED_PLAYER.cash}</p>
-						<p>Bank: ${$SELECTED_PLAYER.bank}</p>
+						<p>Cash: 𝕍{$SELECTED_PLAYER.cash}</p>
+						<p>Bank: 𝕍{$SELECTED_PLAYER.bank}</p>
 						<p>Phone: {$SELECTED_PLAYER.phone}</p>
 					</div>
 					<p class="font-medium text-[1.7vh]">Vehicles</p>

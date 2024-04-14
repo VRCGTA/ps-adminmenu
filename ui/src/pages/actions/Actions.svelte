@@ -6,7 +6,7 @@
 	import Tabs from './components/Tabs.svelte'
 	import Button from './components/Button.svelte'
 	import Dropdown from './components/Dropdown.svelte'
-	import ButtonState from '@pages/Server/components/ButtonState.svelte'
+	import ButtonState from '@pages/server/components/ButtonState.svelte'
 
 </script>
 
