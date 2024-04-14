@@ -197,7 +197,7 @@ RegisterNetEvent('ps-adminmenu:server:TakeMoney', function(data, selectedData)
     end
 
     QBCore.Functions.Notify(src,
-        locale((moneyType == "crypto" and "take_money_crypto" or "take_money"), tonumber(amount) .. "$",
+        locale((moneyType == "crypto" and "take_money_crypto" or "take_money"), tonumber(amount) .. "𝕍",
             Player.PlayerData.charinfo.firstname .. " " .. Player.PlayerData.charinfo.lastname), "success")
 end)
 
