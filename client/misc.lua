@@ -55,22 +55,22 @@ local function CopyCoords(data)
 end
 
 RegisterCommand("vector2", function()
-    if not CheckPerms('mod') then return end
+    -- if not CheckPerms('mod') then return end
     CopyCoords("vector2")
 end, false)
 
 RegisterCommand("vector3", function()
-    if not CheckPerms('mod') then return end
+    -- if not CheckPerms('mod') then return end
     CopyCoords("vector3")
 end, false)
 
 RegisterCommand("vector4", function()
-    if not CheckPerms('mod') then return end
+    -- if not CheckPerms('mod') then return end
     CopyCoords("vector4")
 end, false)
 
 RegisterCommand("heading", function()
-    if not CheckPerms('mod') then return end
+    -- if not CheckPerms('mod') then return end
     CopyCoords("heading")
 end, false)
 
