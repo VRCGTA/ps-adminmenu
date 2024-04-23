@@ -44,7 +44,6 @@ local function getPlayers()
             dob = playerData.charinfo.birthdate,
             cash = playerData.money.cash,
             bank = playerData.money.bank,
-            phone = playerData.charinfo.phone,
             vehicles = vehicles
         }
     end
