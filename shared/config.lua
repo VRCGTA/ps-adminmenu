@@ -673,6 +673,20 @@ Config.Actions = {
             { label = "Confirm", option = "button",   type = "server", event = "ps-adminmenu:server:RemoveStickerPermit" },
         },
     },
+    ["carry_stop"] = {
+        label = "Stop carry",
+        perms = "mod",
+        dropdown = {
+            { label = "Player",  option = "dropdown", data = "players" },
+            { label = "Confirm", option = "button",   type = "server", event = "ps-adminmenu:server:StopCarry" },
+        },
+    },
+    ["toggle_showall"] = {
+        label = "Show all player blip",
+        type = "client",
+        event = "jobblips:client:toggleShowAll",
+        perms = "mod",
+    },
 }
 
 Config.PlayerActions = {

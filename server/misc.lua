@@ -308,3 +308,13 @@ RegisterNetEvent('ps-adminmenu:server:RemoveStickerPermit', function(data, selec
 
     QBCore.Functions.Notify(source, string.format("%s %sからステッカー権限を剥奪しました", target.PlayerData.charinfo.firstname, target.PlayerData.charinfo.lastname), 'error')
 end)
+
+RegisterNetEvent('ps-adminmenu:server:StopCarry', function(data, selectedData)
+    local data = CheckDataFromKey(data)
+    if not data or not CheckPerms(data.perms) then return end
+
+    local target = selectedData["Player"].value
+
+    TriggerEvent('CarryPeople:stop', target)
+    QBCore.Functions.Notify(source, "キャリーを解除した", 'success')
+end)
