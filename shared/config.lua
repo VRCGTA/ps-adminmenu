@@ -687,6 +687,33 @@ Config.Actions = {
         event = "jobblips:client:toggleShowAll",
         perms = "mod",
     },
+    ["vehicle_dirt_level"] = {
+        label = "Set Vehicle Dirt Level",
+        type = "client",
+        event = "ps-adminmenu:client:SetDirtLevel",
+        perms = "mod",
+        dropdown = {
+            { label = "DirtLevel", option = "dropdown", data = {
+                { label = "Clear",  value = "0" },
+                { label = "1", value = "1.0" },
+                { label = "2", value = "2.0" },
+                { label = "3",     value = "3.0" },
+                { label = "4",    value = "4.0" },
+                { label = "5",   value = "5.0" },
+                { label = "6",      value = "6.0" },
+                { label = "7",     value = "7.0" },
+                { label = "8",     value = "8.0" },
+                { label = "9",     value = "9.0" },
+                { label = "10",     value = "10.0" },
+                { label = "11",     value = "11.0" },
+                { label = "12",     value = "12.0" },
+                { label = "13",     value = "13.0" },
+                { label = "14",     value = "14.0" },
+                { label = "15",     value = "15.0" },
+            }, },
+            { label = "Confirm", option = "button",   type = "client", event = "ps-adminmenu:client:SetDirtLevel" },
+        }
+    }
 }
 
 Config.PlayerActions = {

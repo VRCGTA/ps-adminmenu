@@ -187,6 +187,19 @@ RegisterNetEvent("ps-adminmenu:client:SpawnPersonalVehicle", function(data, sele
     end, vehicle, coords, true)
 end)
 
+RegisterNetEvent("ps-adminmenu:client:SetDirtLevel", function(data, selectedData)
+    local data = CheckDataFromKey(data)
+    if not data or not CheckPerms(data.perms) then return end
+
+    local dirtLevel = selectedData['DirtLevel'].value
+    if cache.vehicle then
+        SetVehicleDirtLevel(cache.vehicle, tonumber(dirtLevel))
+        QBCore.Functions.Notify("車両の汚れを変更しました", 'success')
+    else
+        QBCore.Functions.Notify(locale("not_in_vehicle"), 'error')
+    end
+end)
+
 
 -- Get Vehicle Data
 lib.callback.register("ps-adminmenu:client:getvehData", function(vehicle)
