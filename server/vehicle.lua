@@ -115,6 +115,23 @@ RegisterNetEvent("ps-adminmenu:server:SetVehicleState", function(data, selectedD
     QBCore.Functions.Notify(src, locale("state_changed"), "success", 5000)
 end)
 
+-- Remove stance kit
+RegisterNetEvent("ps-adminmenu:server:RemoveStanceKit", function(data, selectedData)
+    local src = source
+
+    local data = CheckDataFromKey(data)
+    if not data or not CheckPerms(data.perms) then
+        QBCore.Functions.Notify(src, locale("no_perms"), "error", 5000)
+        return
+    end
+
+    local plate = string.upper(selectedData['Plate'].value)
+
+    TriggerEvent("az:stance:removeStance", plate)
+
+    QBCore.Functions.Notify(src, "スタンスキットを取り外した", "success", 5000)
+end)
+
 -- Change Plate
 RegisterNetEvent('ps-adminmenu:server:ChangePlate', function(newPlate, currentPlate)
     local newPlate = newPlate:upper()

@@ -681,6 +681,14 @@ Config.Actions = {
             { label = "Confirm", option = "button",   type = "server", event = "ps-adminmenu:server:StopCarry" },
         },
     },
+    ["remove_stance_kit"] = {
+        label = "Remove Stance kit",
+        perms = "mod",
+        dropdown = {
+            { label = "Plate",   option = "text" },
+            { label = "Confirm", option = "button", type = "server", event = "ps-adminmenu:server:RemoveStanceKit" },
+        },
+    },
     ["toggle_showall"] = {
         label = "Show all player blip",
         type = "client",
